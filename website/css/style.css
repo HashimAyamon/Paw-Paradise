@@ -1,0 +1,825 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+  padding: 0%;
+  margin: auto;
+  max-width: 1366px;
+}
+@font-face{font-family:tahoma;src:url("../font/tahoma.ttf") }
+/* * navbar */
+.nav {
+width: 100%;
+  background-color: #e9c3a0;
+  display: flex;
+  align-items: center;
+}
+
+.nav img {
+  height: 2%;
+  width: 4%;
+  margin: 1%;
+}
+
+.nav a {
+  margin-left: 25%;
+  margin-top: 1%;
+  font-size: 15pt;
+  font-weight: 300;
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s; /* Smooth transition for color and transform */
+}
+
+.nav a:hover {
+  transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+/* banner css */
+.banner {
+  height: 579px;
+  background-color: #f0f4f5;
+  
+}
+.banner img {
+  height: 90%;
+  margin-left: 60%;
+  margin-top: 2%;
+  opacity: 0; /* Start hidden */
+  transform: translateY(-20px); /* Start slightly higher */
+  animation: fadeInBounce 1s forwards; /* Apply animation */
+}
+@keyframes fadeInBounce {
+  0% {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  60% {
+      opacity: 1;
+      transform: translateY(10px); /* Bounce effect */
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0); /* End position */
+  }
+}
+.banner h1, .banner h2 {
+  opacity: 0; /* Start invisible */
+  transform: translateY(20px); /* Start slightly down */
+  animation: fadeInUp 1s forwards; /* Apply animation */
+}
+.banner h1 {
+ margin-top: -20%;
+  margin-left: 9%;
+  animation-delay: 0.4s; /* Delay for h1 */
+}
+.banner h2 {
+  margin-left: -28%;
+  font-size: large;
+  animation-delay: 0.7s; /* Delay for h2 */
+}
+@keyframes fadeInUp {
+  to {
+      opacity: 1; /* Fully visible */
+      transform: translateY(0); /* Move to original position */
+  }
+}
+.banner .button1 {
+  background-color: #ff782c;
+  color: white;
+  border: 1px solid #ffffff;
+  margin-left: 8%;
+  height: 11%;
+  width: 13%;
+  border-radius: 45px;
+  transition: background-color 0.3s, transform 0.3s;
+  font-weight: bold;
+}
+.banner .button1:hover {
+  background-color: #ff9100; /* Darker blue */
+  transform: scale(1.1); /* Slightly increase size */
+}
+.banner .button2 {
+  color: #ff9100;
+  background-color: #e9ecee;
+  border: 1px solid #ff9100;
+  margin-left: 2%;
+  margin-top: 5%;
+  height: 11%;
+  width: 13%;
+  border-radius: 45px;
+  transition: background-color 0.3s, transform 0.3s;
+  font-weight: bold;
+}
+.banner .button2:hover {
+  background-color: #ffffff; /* Darker blue */
+  transform: scale(1.1); /* Slightly increase size */
+}
+/* about section css */
+.about-section {
+  height: 50%;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.about-section img {
+  width: 40%;
+  height: 100%;
+  left: -100%; /* Start off-screen to the left */
+  opacity: 0; /* Start transparent */
+  animation: slideIn 3s forwards; /* Apply animation */
+}
+
+@keyframes slideIn {
+  0% {
+      left: -100%; /* Start off-screen */
+      opacity: 0; /* Fully transparent */
+  }
+  100% {
+      left: 0; /* Move to original position */
+      opacity: 1; /* Fully opaque */
+  }
+}
+
+.about-section h2 {
+  margin-top: -44%;
+  margin-left: 48%;
+  color: #ff782c;
+}
+.about-section h1 {
+  margin-left: 59%;
+  font-size: 45pt;
+}
+.about-section p {
+  margin-left: 48%;
+  font-size: 12pt;
+}
+
+.about-cards {
+  display: flex;
+  position: relative;
+  z-index: 2;
+  margin-top: 12%;
+  width: 100%;
+  height:165px;
+}
+.about-cards img {
+  height: 19%;
+  width: 16%;
+  margin-left: 5%;
+}
+.about-cards h1 {
+  font-size: 18pt;
+  color: black;
+  margin-left: -1%;
+  margin: 1%;
+}
+.about-cards p {
+  font-size: medium;
+  margin-left: -1%;
+  margin: 1%;
+}
+.about-cards .card1 {
+  background-color: #f4f6f1;
+  margin-left: 7%;
+  opacity: 71%;
+  position: relative;
+  z-index: 3;
+}
+.about-cards .card2 {
+  background-color: #f4f6f1;
+  opacity: 71%;
+  margin-left: 2%;
+  position: relative;
+  z-index: 3;
+}
+.about-cards .card3 {
+  background-color: #f4f6f1;
+  margin-left: 2%;
+  position: relative;
+  z-index: 3;
+  opacity: 71%;
+}
+.about-cards .card4 {
+  margin-left: 2%;
+  background-color: #f4f6f1;
+  opacity: 71%;
+  position: relative;
+  z-index: 3;
+}
+
+/* service  */
+.services-page {
+	width: 100%;
+  height: 100%;
+  background-color: #f7f8f5;
+  text-align: center; /* Center text for the entire section */
+}
+
+.services-page h3 {
+  color: #ff782c;
+  padding-top: 4%;
+}
+
+.services-page h2 {
+  font-size: 40pt;
+}
+
+.services-page .services {
+  display: flex;
+  justify-content: center;
+  margin-top: 4%;
+}
+
+.services-page .services .card {
+  background-color: #fff;
+  margin: 2%;
+  padding: 2%;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 20%;
+}
+
+.services-page .services img {
+  width: 100%;
+  border-radius: 45px;
+  transition: transform 0.8s ease, opacity 0.3s ease; /* Smooth transition */
+}
+.services img:hover {
+  transform: scale(1.1); /* Scale up the image */
+}
+
+.card-body {
+  padding: 1%;
+}
+
+.card-title {
+  font-size: larger;
+}
+
+.card-text {
+  color: #000000;
+  font-size: 15pt;
+}
+
+/* count  */
+.count {
+  display: flex;
+  padding: 3%;
+  background-color: #f7f8f5;
+}
+.count .customers {
+  width: 25%;
+  background-color: #e7f6fb;
+  margin-left: 6%;
+  height: 12%;
+}
+.count .product {
+  width: 25%;
+  height: 237px;
+  background-color: #fef5e2;
+  margin-left: 4%;
+  height: 12%;
+}
+.count .proffesionals {
+  width: 25%;
+  height: 237px;
+  background-color: #edf9e5;
+  margin-left: 5%;
+  height: 12%;
+}
+.count img {
+  width: 25%;
+  height: 25%;
+}
+
+/* .product section css */
+.product {
+  background-color: #f7f8f5;
+  text-align: center;
+height:1075px; 
+}
+
+.product button {
+  background-color: #ff782c;
+  color: white;
+  border: none;
+  width: 30%;
+  height: 45px;
+  cursor: pointer;
+  font-size: 16pt;
+  margin-bottom: 4%;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.product button:hover {
+  background-color: #eb510a; /* Darker blue */
+  transform: scale(1.1); /* Slightly increase size */
+}
+.row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px; /* Spacing between rows */
+}
+
+.card {
+  width: 20%;
+  margin: 4%; /* Spacing between cards */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+.sale-icon {
+  height: 18%;
+  width: 18%;
+  position: absolute;
+  top: 0%; /* Adjust position */
+  right: 0%; /* Adjust position */
+  z-index: 1; /* Ensure it's on top */
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease; /* Smooth transition for transform */
+}
+.card:hover .card-img {
+  transform: scale(0.9) rotate(3deg); /* Scale up and rotate slightly on hover */
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.card-title {
+  font-size: 14pt;
+  margin: 10px 0; /* Space around the title */
+}
+
+.card-text {
+  color: #000;
+  font-size: 16pt;
+}
+
+/* <!-- our-services  */
+.our-services {
+  background-color: #dee0e1;
+  display: flex;
+  height: 95%;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+.our-services .leftside {
+  margin-left: 3%;
+  flex: 1;
+}
+.our-services .leftside img {
+  margin-top: 2%;
+  height: 90%;
+  width: 90%;
+  border-radius: 0px 50px 50px 0px;
+  transform: translateX(-100%); /* Start off-screen on the left */
+  opacity: 0;
+  animation: slideInFromLeft 1.5s ease-out forwards;
+}
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%); /* Fully off-screen */
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0); /* At the original position */
+    opacity: 1;
+  }
+}
+.our-services .rightside {
+  margin-left: 25%;
+  flex: 1;
+}
+.our-services .rightside h4 {
+  color: #c98044;
+  text-align: center;
+  margin-top: -22%;
+}
+.our-services .rightside h2 {
+  text-align: center;
+  margin-top: 1%;
+}
+.our-services .rightside p {
+  margin-top: 3%;
+  color: #000;
+}
+.our-services .rightside ul {
+  margin-top: 3%;
+}
+.our-services .rightside li {
+  font-size: large;
+  border-bottom: 2px dotted black;
+}
+
+.box {
+  background-color: #1d1a23;
+  opacity: 85%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transform: translateX(100%); /* Start off-screen to the right */
+  opacity: 0; /* Start invisible */
+  animation: slideInFromCenter 1.5s ease-out forwards;
+  position: absolute;
+  top: 30%; /* Adjust the position */
+  right: 45%; /* Adjust as per requirement */
+  padding: 20px;
+  border-radius: 15px;
+  z-index: 2; /* Bring the box in front of other elements */
+}
+@keyframes slideInFromCenter {
+  0% {
+    transform: translateX(100%); /* Off-screen to the right */
+    opacity: 0; /* Fully transparent */
+  }
+  50% {
+    transform: translateX(-50%); /* Center position */
+    opacity: 0.5; /* Half transparent */
+  }
+  100% {
+    transform: translateX(0); /* Original position */
+    opacity: 1; /* Fully visible */
+  }
+}
+.box h5,
+p {
+  color: white;
+  font-size: small;
+}
+
+/* 4 image  */
+.images {
+  display: flex;
+  height: 60%;
+}
+.images img {
+  width: 25%;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+.images img:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* staffs  */
+.staffs {
+  padding-top: 7%;
+  height: 110%;
+  background-color: #f7f8f5;
+  padding-bottom: 15%;
+}
+.staffs h2 {
+  color: #c7620f;
+  text-align: center;
+}
+.staffs h1 {
+  text-align: center;
+}
+.staffs .staff-card {
+  display: flex;
+  margin-left: 12%;
+}
+.staffs .staff-card span {
+  font-size: 20px;
+}
+.staffs .staff-card .staff1 p {
+  color: #000000;
+  margin-left: 22%;
+}
+.staffs .staff-card .staff1 span {
+  margin-left: 18%;
+}
+
+.staffs .staff-card .staff2 p {
+  color: #070707;
+  margin-left: 22%;
+}
+.staffs .staff-card .staff2 span {
+  margin-left: 18%;
+}
+.staffs .staff-card .staff3 p {
+  color: #000000;
+  margin-left: 22%;
+}
+.staffs .staff-card .staff3 span {
+  margin-left: 18%;
+}
+
+/*booking section*/
+
+.booking {
+  display: flex;
+  width: 100%;
+  height: 95%;
+  background-color: #f7f8f5;
+  margin-bottom: 3%;
+  
+}
+.booking .left-side {
+  width: 42%;
+}
+.booking .left-side img {
+  height: 100%;
+  width: 110%;
+  padding-bottom:10%;
+  animation: scaleAnimation 10s infinite; /* Animation lasts 2 seconds and loops infinitely */
+}
+@keyframes scaleAnimation {
+  0%, 100% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.2); /* Scale up */
+  }
+}
+.booking .right-side {
+  width: 39%;
+  margin-top: 2%;
+  margin-left: 10%;
+}
+
+.booking .right-side form {
+  height: 97%;
+  width: 90%;
+  border-radius: 45px;
+  background-color: white;
+  padding: 20px;
+}
+
+.booking .right-side form h2 {
+  color: #c7620f;
+  font-size: larger;
+  padding-top: 2%;
+  text-align: center;
+}
+
+.booking .right-side form h1 {
+  text-align: center;
+}
+
+.dropdown {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: #f9f9f9;
+  color: black;
+  padding: 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 40px;
+  width: 85%;
+  margin-left: 4%;
+  padding-top: 2%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Animation on hover */
+}
+
+.dropbtn:hover {
+  background-color: #c7611f; /* Change background on hover */
+  color: white; /* Change text color on hover */
+  transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  border-radius: 5px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(-10px); /* Start slightly above */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block; /* Show dropdown on hover */
+  opacity: 1; /* Fade in */
+  transform: translateY(0); /* Move into place */
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.2s ease; /* Transition for links */
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+button {
+  width: 85%;
+  color: #ffffff;
+  height: 50px;
+  background-color: #fc823b;
+  border: 1px solid white;
+  border-radius: 31px;
+  margin-left: 4%;
+  margin-top: 4px;
+  margin-bottom: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Animation on hover */
+}
+
+button:hover {
+  background-color: #c7611f; /* Darker orange on hover */
+  transform: scale(1.05); /* Slightly enlarge button */
+}
+
+
+/* blog-section */
+
+.blog-section {
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 800px;
+  margin: auto;
+  animation: fadeIn 0.5s ease-in-out;
+  height: 90%;
+}
+
+h4 {
+  margin: 0;
+  font-size: 28px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 4%;
+  font-size: 28px;
+  text-align: center;
+}
+
+.blog {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 9%;
+}
+
+.blog-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 1px;
+  height: 100%;
+  width: 30%;
+  padding: 1px;
+  transition: transform 0.3s;
+}
+
+.blog-card:hover {
+  transform: scale(1.26); /* Scale effect on hover */
+}
+
+.blog-img {
+  width: 100%;
+  height: auto;
+}
+
+.blog-content {
+  padding: 15px;
+}
+
+.blog-title {
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.blog-text {
+  color: black;
+  margin-bottom: 10px;
+  font-size: larger;
+}
+
+.blog-btn:hover {
+  background-color: #b0b0b0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* <!-- feed back section / --> */
+.feedback-section {
+  height: 97%;
+  background-color: #f7f8f5;
+  margin-top: 2%;
+  padding: 20px; 
+}
+
+.feedback-section img {
+  height: 90px;
+  margin: 1%;
+}
+
+.feedback-section h1 {
+  color: #000000;
+  text-align: center;
+  padding-top: 3%;
+  margin-bottom: 4%;
+  font-size: 35px;
+}
+
+.feedback-section .first-feedback,
+.feedback-section .second-feedback {
+  background-color: white;
+  width: 35%; 
+  height: auto;
+  margin: 6%; /* Space between feedback cards */
+  padding: 20px; 
+  border-radius: 10px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for animation */
+}
+.feedback-section .third-feedback{
+  background-color: white;
+  width: 35%; 
+  height: auto;
+  margin-left: 33%; /* Space between feedback cards */
+  padding: 20px; /* Add padding inside feedback cards */
+  border-radius: 10px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for animation */
+}
+.feedback-section .first-feedback:hover,
+.feedback-section .second-feedback:hover,
+.feedback-section .third-feedback:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.checked {
+  color: orange;
+}
+
+.updates {
+  height: 25vh;
+  border-radius: 45px;
+  width: 85%;
+  margin-left: 6.5%;
+  background-color: #c7620f;
+  display: flex;
+  margin-top: 6%;
+  padding-top: 5%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for smooth effects */
+}
+.updates:hover {
+  transform: scale(1.01); /* Slightly enlarge the section on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+
+.updates p {
+  font-size: 23px;
+  margin-left: 2%;
+  margin-top: 3.5%;
+}
+
+.updates span {
+  margin-top: 2%;
+  margin-left: 30%;
+  font-size: 22px;
+  color: white;
+}
+.updates img {
+  height: 40%;
+}
+
+/* footer secton  */
+.footer {
+  margin-top: 4%;
+  display: flex;
+  color: #000000;
+  background-color: #fff;
+  padding-bottom: 1%;
+  margin-left: 6%;
+  border-top: 1px solid #e5e5e5;
+}
+.footer img {
+  width: 60%;
+}
+.col-md-3 {
+  margin-left: 6%;
+}
